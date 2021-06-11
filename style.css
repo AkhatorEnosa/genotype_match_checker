@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: white;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgba(0,0,0,.5);
+  text-align: center;
+  text-transform: uppercase;
+  padding: 50px;
+}
+
+.header {
+    display: block;
+    margin: 40px;
+    text-align: center;
+}
+
+h1 {
+    padding-bottom: 20px;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid black;
+  padding: 20px;
+}
+
+.genotypes {
+  display: flex;
+  width: 50%;
+  border: 2px solid red;
+  padding: 5px;
+}
+
+.label {
+  margin-bottom: 30px;
+}
+
+.option {
+  width: 80px;
+  height: 80px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  margin: 5px;
+  background: rgba(0,0,0,.5);
+  color: white;
+  transition: 0.3s all ease-in-out;
+}
+
+/* .option:hover {
+  background: black;
+  font-size: 2rem;
+  box-shadow: 0px 5px 5px #ccc;
+} */
+
+.result {
+  width: 45%;
+  border: 2px solid blue;
+  padding: 5px;
+}
