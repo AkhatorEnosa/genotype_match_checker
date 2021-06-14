@@ -30,33 +30,66 @@ h1 {
 }
 
 .genotypes {
-  display: flex;
   width: 50%;
   border: 2px solid red;
   padding: 5px;
 }
 
-.label {
-  margin-bottom: 30px;
+.gene-group {
+  margin-bottom: 50px;
 }
 
-.option {
+.gene-group h2 {
+  text-align: center;
+}
+
+.label {
+  margin-bottom: 10px;
+}
+
+ul{
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+
+.man {
   width: 80px;
   height: 80px;
   border: none;
   outline: none;
-  border-radius: 5px;
-  margin: 5px;
+  border-radius: 60px;
   background: rgba(0,0,0,.5);
+  line-height: 80px;
   color: white;
   transition: 0.3s all ease-in-out;
 }
 
-/* .option:hover {
+.woman {
+  width: 80px;
+  height: 80px;
+  border: none;
+  outline: none;
+  border-radius: 60px;
+  background: rgba(0,0,0,.5);
+  line-height: 80px;
+  color: white;
+  transition: 0.3s all ease-in-out;
+}
+
+.selected{
+  position: absolute;
   background: black;
-  font-size: 2rem;
+  font-size: auto;
+  transform: scale(2);
+  margin: 0px auto;
+  text-align: center;
   box-shadow: 0px 5px 5px #ccc;
-} */
+  z-index: 1000;
+}
 
 .result {
   width: 45%;
