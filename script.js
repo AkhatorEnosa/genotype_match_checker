@@ -6,6 +6,17 @@ var check = document.querySelector(".check");
 var manValue, womanValue = "";
 var values = [];
 
+function checkButtonControl(){
+  console.log(values);
+  if(values === [] || values.length < 2) {
+    check.style.opacity = 0.2;
+    check.disabled = true;
+  } else {
+    check.style.opacity = 1;
+    check.disabled = false;
+  }
+}
+
 function getManValue(e) {
   if(e.target && !e.target.classList.contains("selected")){
     e.target.classList.add("selected");
@@ -31,6 +42,7 @@ function getManValue(e) {
     values.shift();
 	}
 
+  checkButtonControl();
   return values;
 }
 
@@ -57,11 +69,13 @@ function getWomanValue(e) {
     });
     values.pop();
 	}
+
+  checkButtonControl();
   return values
 }
 
 
-function createPElement() {
+function checkResult() {
   var newValues = JSON.stringify(values);
   if (newValues == JSON.stringify(["AA","AA"])) {
     result.textContent = "Excellent.";
@@ -88,13 +102,7 @@ function createPElement() {
   }
 }
 
-if(values.length < 2) {
-  check.style.opacity = 0.2;
-  check.disabled = true;
-} else {
-  check.disabled = false;
-}
-
+// window.addEventListener('load', checkButtonControl)
 man.addEventListener('click', getManValue);
 woman.addEventListener('click', getWomanValue);
-check.addEventListener('click', createPElement);
+check.addEventListener('click', checkResult);
