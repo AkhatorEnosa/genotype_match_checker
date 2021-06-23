@@ -37,6 +37,7 @@ h1 {
 
 .gene-group {
   margin-bottom: 50px;
+  width: 38%;
 }
 
 .gene-group h2 {
@@ -104,4 +105,5 @@ ul{
   width: 45%;
   border: 2px solid blue;
   padding: 5px;
+  margin: 0px auto;
 }
