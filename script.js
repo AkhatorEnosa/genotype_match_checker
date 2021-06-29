@@ -1,15 +1,15 @@
-var manOption = document.querySelector(".man");
-var womanOption = document.querySelector(".woman");
+var man = document.querySelector("#man");
+var woman = document.querySelector("#woman");
 var womanGroup = document.querySelector(".gene-group-woman");
 var resultText = document.querySelector(".result-text");
 var resultText2 = document.querySelector(".result-text2");
 var result = document.querySelector(".result");
 var check = document.querySelector(".check");
+var modalClose = document.querySelector(".modal-close");
 var manValue, womanValue = "";
 var values = [];
 
 function checkButtonControl(){
-  console.log(values);
   if(values === [] || values.length < 2) {
     check.style.opacity = 0.8;
     check.disabled = true;
@@ -20,28 +20,26 @@ function checkButtonControl(){
 }
 
 function getManValue(e) {
-  if(e.target && !e.target.classList.contains("selected")){
+
+  if(!e.target.matches("div#man") && !e.target.classList.contains("selected")){
     e.target.classList.add("selected");
-    // e.target.style = "transform: rotate(360deg) scale(1.3);";
     manValue = e.target.value;
-    womanGroup.style.visibility = "visible";
     var notSelected = document.querySelectorAll("button.man:not(.selected)");
     notSelected.forEach(x => {
-      x.style.cssText = "opacity: 0.2;";
       x.disabled = true;
     });
-    // result.append(createPElement());
-    // console.log(manValue);
+
     values.unshift(manValue);
-	}else{
+
+	} else if(e.target.classList.contains("selected")){
+
 		e.target.classList.remove("selected");
-    // e.target.style = "transform: rotate(-360deg);";
     var notSelected = document.querySelectorAll("button.man");
     notSelected.forEach(x => {
-      x.style.cssText = "opacity: 1;";
       x.disabled = false;
     });
     values.shift();
+
 	}
 
   checkButtonControl();
@@ -49,27 +47,28 @@ function getManValue(e) {
 }
 
 function getWomanValue(e) {
-  if(e.target && !e.target.classList.contains("selected")){
+
+  if(!e.target.matches("div#man") && !e.target.classList.contains("selected")){
+
     e.target.classList.add("selected");
-    // e.target.style = "transform: rotate(360deg) scale(1.3);";
     womanValue = e.target.value;
     var notSelected = document.querySelectorAll("button.woman:not(.selected)");
     notSelected.forEach(x => {
-      x.style.cssText = "opacity: 0.2;";
       x.disabled = true;
     });
 
     values.push(womanValue);
-	}else{
+
+	} else if(e.target.classList.contains("selected")){
+
 		e.target.classList.remove("selected");
-    // e.target.style = "transform: rotate(-360deg);";
     womanValue = "";
     var notSelected = document.querySelectorAll("button.woman");
     notSelected.forEach(x => {
-      x.style.cssText = "opacity: 1;";
       x.disabled = false;
     });
     values.pop();
+
 	}
 
   checkButtonControl();
@@ -80,6 +79,8 @@ function getWomanValue(e) {
 function checkResult() {
   var newValues = JSON.stringify(values);
   result.style = "visibility: visible";
+  modalClose.style = "visibility: visible";
+
   if (newValues == JSON.stringify(["AA","AA"])) {
 
     resultText.textContent = "Excellent";
@@ -100,7 +101,7 @@ function checkResult() {
     resultText.textContent = "Good";
     resultText2.innerHTML = "<span>1 in 4 kids will be <b>AC</b>. The rest will be <b>AA</b>. <br/>(AA, AA, AA, AC) </span>";
 
-  } else if (newValues == JSON.stringify(["AA","SC"]) || newValues == JSON.stringify(["AC","AA"])) {
+  } else if (newValues == JSON.stringify(["AA","SC"]) || newValues == JSON.stringify(["SC","AA"])) {
 
     resultText.textContent = "Fair";
     resultText2.innerHTML = "<span>No additinal information for this at the moment. Thank you.</span>";
@@ -144,6 +145,7 @@ function checkResult() {
 }
 
 function closeModal() {
+	modalClose.style.visibility = "hidden";
 	result.style.visibility = "hidden";
 }
 
@@ -151,4 +153,4 @@ function closeModal() {
 man.addEventListener('click', getManValue);
 woman.addEventListener('click', getWomanValue);
 check.addEventListener('click', checkResult);
-result.addEventListener('click', closeModal)
+modalClose.addEventListener('click', closeModal)
