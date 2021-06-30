@@ -45,6 +45,12 @@ body {
     width: 300px;
     margin: 0px auto;
     margin-bottom: 40px;
+    opacity: 0.8;
+}
+
+.logo {
+  width: 70px;
+  height: 70px;
 }
 
 h1 {
@@ -53,6 +59,7 @@ h1 {
 
 .main {
   padding: 20px;
+  margin-top: 100px;
 }
 
 .genotypes {
@@ -72,6 +79,7 @@ h1 {
 
 .label {
   margin-bottom: 40px;
+  opacity: 0.8;
 }
 
 #man, #woman {
@@ -136,10 +144,10 @@ h1 {
     transform: translate(-50%,-50%); 
     padding: 20px;
     background: linear-gradient(270deg, rgb(84, 41, 163), rgb(97, 54, 217));
-    box-shadow: 0px 3px solid #ccc;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     visibility: hidden;
-    transition: 0.2s all ease-in-out;
+    transition: 0.5s all ease-in-out;
     z-index: 1000;
 }
 
@@ -179,6 +187,412 @@ h1 {
     box-shadow: 0px 0px 20px black;
     transition: 0.2s all ease-in-out;
 }
+
+@media (max-width: 500px), (max-width:550px ) {
+  body {
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .wrapper {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    margin-top: 30px;
+  }
+
+  .header {
+    display: block;
+    margin-top: 0;
+    text-align: center;
+    height: fit-content;
+    margin: 0px auto;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+  
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  h1 {
+      width: fit-content;
+      font-size: 1.3rem;
+      letter-spacing: 5px;
+      line-height: 35px;
+      margin: 0px auto;
+      text-transform: uppercase;
+      text-align: center;
+      opacity: 0.8;
+  }
+
+  .backdrop {
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+    background: linear-gradient(to right, rgb(97, 54, 217), rgb(84, 41, 163));
+    /* z-index: 1000; */
+  }
+
+  .backdrop-img {
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;
+  }
+
+  .main {
+    padding: 0px;
+    margin-top: 0px;
+  }
+
+  .genotypes {
+    display: block;
+    margin-bottom: 50px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .gene-group {
+    position: relative;
+    width: 90vw;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+
+  /* .gene-group h2 {
+    text-align: center;
+  } */
+
+  .label {
+    margin-bottom: 20px;
+    font-size: 1rem;
+        opacity: 0.8;
+  }
+
+  #man, #woman {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .man {
+    width: 80px;
+    height: 80px;
+    padding: 0px;
+    border-radius: 60px;
+    background: rgba(255, 255, 255, 0.5);
+    line-height: 80px;
+    transition: 0.7s all ease-in-out;
+  }
+
+  .woman {
+    width: 80px;
+    height: 80px;
+    border-radius: 60px;
+    background: rgba(255, 255, 255, 0.5);
+    line-height: 80px;
+    transition: 0.7s all ease-in-out;
+  }
+
+  .selected{
+    background: rgb(255, 255, 255);
+    /* box-shadow: 0px 5px 5px rgb(255, 255, 255); */
+    color: rgb(97, 54, 217);
+    z-index: 1000;
+    animation-duration: 0.5s;
+    animation-name: pop;
+  }
+
+  .check {
+    outline: none;
+    border: none;
+    padding: 20px;
+    margin-bottom: 10px;
+    background: linear-gradient(to right, rgb(97, 54, 217), rgb(84, 41, 163));
+    color: white;
+    border-radius: 5px;
+    opacity: 0.8;
+    transition: 0.2s all ease-in-out;
+  }
+  
+  .result {
+    position: absolute;
+    letter-spacing: normal;
+    width: 80vw;
+    height: 30vh;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%); 
+    padding: 20px;
+    background: linear-gradient(270deg, rgb(84, 41, 163), rgb(97, 54, 217));
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    visibility: hidden;
+    transition: 0.2s all ease-in-out;
+    z-index: 1000;
+  }
+
+  .result .result-container {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+  }
+
+  .result-text {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+
+  .result-text2 {
+    text-transform: none;
+  }
+
+  .result .modal-close {
+      position: absolute;
+      display: flex;
+      align-items: center; 
+      outline: none;
+      border: none;
+      top: -2%;
+      right: -2%;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 1.2rem;
+      width: 30px;
+      height: 30px;
+      background: rgb(255, 255, 255);
+      border-radius: 70%;
+      color: black;
+      font-weight: lighter;
+      box-shadow: 0px 0px 20px black;
+      transition: 0.2s all ease-in-out;
+  }
+}
+
+@media (max-width: 375px) {
+  .header {
+    margin-top: 0;
+    text-align: center;
+    width: 300px;
+    height: auto;
+    margin: 0px auto;
+    margin-bottom: 40px;
+    opacity: 0.8;
+}
+
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  h1 {
+      width: fit-content;
+      font-size: 1rem;
+      letter-spacing: 5px;
+      line-height: 20px;
+      padding: 0;
+      margin: 0px auto;
+      text-transform: uppercase;
+      text-align: center;
+      opacity: 0.8;
+  }
+
+  .main {
+    padding: 0px;
+    margin-top: 0;
+  }
+
+  .genotypes {
+    display: block;
+    margin-bottom: 50px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .gene-group {
+    position: relative;
+    width: 90vw;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+
+  /* .gene-group h2 {
+    text-align: center;
+  } */
+
+  .label {
+    margin-bottom: 20px;
+    /* font-size: 1rem; */
+        opacity: 0.8;
+  }
+
+  #man, #woman {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .man {
+    display: inline-flex;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    padding: 0px;
+    font-size: 0.7rem;
+    align-items: center;
+    border-radius: 60px;
+    background: rgba(255, 255, 255, 0.5);
+    line-height: 80px;
+    transition: 0.7s all ease-in-out;
+  }
+
+  .woman {
+    display: inline-flex;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    padding: 0px;
+    font-size: 0.7rem;
+    align-items: center;
+    border-radius: 60px;
+    background: rgba(255, 255, 255, 0.5);
+    line-height: 80px;
+    transition: 0.7s all ease-in-out;
+  }
+
+  .selected{
+    background: rgb(255, 255, 255);
+    /* box-shadow: 0px 5px 5px rgb(255, 255, 255); */
+    color: rgb(97, 54, 217);
+    z-index: 1000;
+    animation-duration: 0.5s;
+    animation-name: pop;
+  }
+
+  .check {
+    outline: none;
+    border: none;
+    padding: 15px;
+    margin-bottom: 10px;
+    font-size: 0.7rem;
+    background: linear-gradient(to right, rgb(97, 54, 217), rgb(84, 41, 163));
+    color: white;
+    border-radius: 5px;
+    opacity: 0.8;
+    transition: 0.2s all ease-in-out;
+  }
+
+  .result-text2 {
+    text-transform: none;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .header{
+    margin-top: 0;
+    text-align: center;
+    width: 300px;
+    height: auto;
+    margin: 0px auto;
+    margin-bottom: 40px;
+    opacity: 0.8;
+  }
+
+  .logo {
+    width: 35px;
+    height: 35px;
+  }
+
+  h1 {
+    width: fit-content;
+    font-size: 0.8rem;
+    letter-spacing: 5px;
+    line-height: 20px;
+    padding: 0;
+    margin: 0px auto;
+    text-transform: uppercase;
+    text-align: center;
+    opacity: 0.8;
+  }
+
+  .main {
+    padding: 0px;
+    margin-top: 0;
+  }
+
+  .genotypes {
+    display: block;
+    margin-bottom: 50px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .gene-group {
+    position: relative;
+    width: 85vw;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+  .label {
+    margin-bottom: 20px;
+    font-size: 0.7rem;
+    opacity: 0.8;
+  }
+
+  .man {
+    display: inline-flex;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    padding: 0px;
+    font-size: 0.7rem;
+    align-items: center;
+    border-radius: 60px;
+    background: rgba(255, 255, 255, 0.5);
+    line-height: 80px;
+    transition: 0.7s all ease-in-out;
+  }
+
+  .woman {
+    display: inline-flex;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    padding: 0px;
+    font-size: 0.7rem;
+    align-items: center;
+    border-radius: 60px;
+    background: rgba(255, 255, 255, 0.5);
+    line-height: 80px;
+    transition: 0.7s all ease-in-out;
+  }
+
+  .selected{
+    background: rgb(255, 255, 255);
+    /* box-shadow: 0px 5px 5px rgb(255, 255, 255); */
+    color: rgb(97, 54, 217);
+    z-index: 1000;
+    animation-duration: 0.5s;
+    animation-name: pop;
+  }
+
+  .result-text2 {
+    text-transform: none;
+    font-size: 0.7rem;
+  }
+}
+
 
 @keyframes pop {
   0% {

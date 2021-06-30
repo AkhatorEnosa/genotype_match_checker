@@ -48,7 +48,7 @@ function getManValue(e) {
 
 function getWomanValue(e) {
 
-  if(!e.target.matches("div#man") && !e.target.classList.contains("selected")){
+  if(!e.target.matches("div#woman") && !e.target.classList.contains("selected")){
 
     e.target.classList.add("selected");
     womanValue = e.target.value;
