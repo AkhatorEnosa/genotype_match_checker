@@ -360,6 +360,17 @@ button span {
   }
 }
 
+@media (max-width: 320px) {
+  .nextpage {
+    position: absolute;
+    width: 100vw;
+    bottom: 20vh;
+    border-radius: 3px;
+    z-index: 1000;
+    text-align: center;
+  }
+}
+
 /* Fading animation
 .fade {
   -webkit-animation-name: fade;
