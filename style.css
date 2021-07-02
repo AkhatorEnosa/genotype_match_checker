@@ -99,7 +99,7 @@ h1 {
   border-radius: 60px;
   background: rgba(255, 255, 255, 0.5);
   line-height: 80px;
-  transition: 0.7s all ease-in-out;
+  transition: 0.2s all ease-in-out;
 }
 
 .woman {
@@ -110,7 +110,7 @@ h1 {
   border-radius: 60px;
   background: rgba(255, 255, 255, 0.5);
   line-height: 80px;
-  transition: 0.7s all ease-in-out;
+  transition: 0.2s all ease-in-out;
 }
 
 .selected{
@@ -294,7 +294,7 @@ h1 {
     border-radius: 60px;
     background: rgba(255, 255, 255, 0.5);
     line-height: 80px;
-    transition: 0.7s all ease-in-out;
+    transition: 0.2s all ease-in-out;
   }
 
   .woman {
@@ -303,7 +303,7 @@ h1 {
     border-radius: 60px;
     background: rgba(255, 255, 255, 0.5);
     line-height: 80px;
-    transition: 0.7s all ease-in-out;
+    transition: 0.2s all ease-in-out;
   }
 
   .selected{
@@ -453,7 +453,7 @@ h1 {
     border-radius: 60px;
     background: rgba(255, 255, 255, 0.5);
     line-height: 80px;
-    transition: 0.7s all ease-in-out;
+    transition: 0.2s all ease-in-out;
   }
 
   .woman {
@@ -467,7 +467,7 @@ h1 {
     border-radius: 60px;
     background: rgba(255, 255, 255, 0.5);
     line-height: 80px;
-    transition: 0.7s all ease-in-out;
+    transition: 0.2s all ease-in-out;
   }
 
   .selected{
@@ -509,7 +509,7 @@ h1 {
     border-radius: 60px;
     background: rgba(255, 255, 255, 0.5);
     line-height: 80px;
-    transition: 0.7s all ease-in-out;
+    transition: 0.2s all ease-in-out;
   }
 
   .woman {
@@ -523,7 +523,14 @@ h1 {
     border-radius: 60px;
     background: rgba(255, 255, 255, 0.5);
     line-height: 80px;
-    transition: 0.7s all ease-in-out;
+    transition: 0.2s all ease-in-out;
+  }
+
+  .selected{
+    background: rgb(255, 255, 255);
+    /* box-shadow: 0px 5px 5px rgb(255, 255, 255); */
+    color: rgb(97, 54, 217);
+    z-index: 1000;
   }
 }
 
@@ -621,7 +628,7 @@ h1 {
     border-radius: 60px;
     background: rgba(255, 255, 255, 0.5);
     line-height: 80px;
-    transition: 0.7s all ease-in-out;
+    transition: 0.2s all ease-in-out;
   }
 
   .woman {
@@ -635,7 +642,7 @@ h1 {
     border-radius: 60px;
     background: rgba(255, 255, 255, 0.5);
     line-height: 80px;
-    transition: 0.7s all ease-in-out;
+    transition: 0.2s all ease-in-out;
   }
 
   .selected{
