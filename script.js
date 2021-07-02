@@ -83,62 +83,62 @@ function checkResult() {
 
   if (newValues == JSON.stringify(["AA","AA"])) {
 
-    resultText.textContent = "Excellent";
+    resultText.textContent = "Result:  Excellent";
     resultText2.innerHTML = "<span>All kids will be <b>'healthy (AA)'</b>. <br/>(AA, AA, AA, AA)</span>";
 
   } else if (newValues == JSON.stringify(["AA","AS"]) || newValues == JSON.stringify(["AS","AA"])) {
 
-    resultText.textContent = "Good";
+    resultText.textContent = "Result:  Good";
     resultText2.innerHTML = "<span>1 in 2 kids will be <b>'carriers (AS)'</b>, the rest will be <b>AA</b>. <br/>(AA, AS, AA, AS) </span>";
 
   } else if (newValues == JSON.stringify(["AA","SS"]) || newValues == JSON.stringify(["SS","AA"])) {
 
-    resultText.textContent = "Fair";
+    resultText.textContent = "Result:  Fair";
     resultText2.innerHTML = "<span>All kids will be <b>AS</b>. <br/>(AS, AS, AS, AS) </span>";
 
   } else if (newValues == JSON.stringify(["AA","AC"]) || newValues == JSON.stringify(["AC","AA"])) {
 
-    resultText.textContent = "Good";
+    resultText.textContent = "Result:  Good";
     resultText2.innerHTML = "<span>1 in 4 kids will be <b>AC</b>. The rest will be <b>AA</b>. <br/>(AA, AA, AA, AC) </span>";
 
   } else if (newValues == JSON.stringify(["AA","SC"]) || newValues == JSON.stringify(["SC","AA"])) {
 
-    resultText.textContent = "Fair";
+    resultText.textContent = "Result:  Fair";
     resultText2.innerHTML = "<span>No additinal information for this at the moment. Thank you.</span>";
 
   } else if (newValues == JSON.stringify(["AS", "AS"])) {
 
-    resultText.textContent = "Very Bad";
+    resultText.textContent = "Result:  Very Bad";
     resultText2.innerHTML = "<span>1 in 4 kids will be <b>SS</b>. 2 in 4 kids will be <b>AS</b>. 1 in 4 kids will be <b>AA</b>. <br/>(AA, AS, AS, SS)</span>";
 
   } else if (newValues == JSON.stringify(["AS","SS"]) || newValues == JSON.stringify(["SS","AS"])) {
 
-    resultText.textContent = "Very Bad";
+    resultText.textContent = "Result:  Very Bad";
     resultText2.innerHTML = "<span>3 in 4 kids will be <b>SS</b>. The rest will be <b>AS</b>. <br/>(AS, SS, SS, SS) </span>";
 
   } else if (newValues == JSON.stringify(["AS","AC"]) || newValues == JSON.stringify(["AC","AS"])) {
 
-    resultText.textContent = "Bad; Advice Needed(Contact Your Doctor)";
+    resultText.textContent = "Result:  Bad";
     resultText2.innerHTML = "<span>1 in 4 kids will be <b>SS</b>. 1 in 4 kids will be <b>AS</b>. 1 in 4 kids will be <b>AC</b>. 1 in 4 kids will be <b>AA</b>. <br/>(AA, AS, AC, SS)</span>";
 
   } else if (newValues == JSON.stringify(["AC","AC"])) {
 
-    resultText.textContent = "Bad; Advice Needed(Contact Your Doctor)";
+    resultText.textContent = "Result:  Bad";
     resultText2.innerHTML = "<span>1 in 4 kids will be <b>SS</b>. 2 in 4 kids will be <b>AC</b>. 1 in 4 kids will be <b>AA</b>. <br/>(AA, AC, AC, SS)</span>";
 
   } else if (newValues == JSON.stringify(["AC","SS"]) || newValues == JSON.stringify(["SS","AC"])) {
 
-    resultText.textContent = "Very Bad";
+    resultText.textContent = "Result:  Very Bad";
     resultText2.innerHTML = "<span>2 in 4 kids will be <b>AS</b>. 2 in 4 kids will be <b>SS</b>.<br/>(AS, AS, SS, SS)</span>";
 
   }  else if (newValues == JSON.stringify(["SS","SS"])) {
 
-    resultText.textContent = "Very Bad";
+    resultText.textContent = "Result:  Very Bad";
     resultText2.innerHTML = "<span>All kids will be <b>'sicklers (SS)'</b>. <br/>(SS, SS, SS, SS)</span>";
 
   } else {
 
-    resultText.textContent = "Very Bad";
+    resultText.textContent = "Result:  Very Bad";
     resultText2.innerHTML = "<span>No additinal information for this at the moment. Thank you.</span>";
 
   }
