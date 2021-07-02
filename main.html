@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Genotype Match Checker</title>
+  <link rel="stylesheet" href="style.css">
+	<!-- <link rel="icon" type="image/png" href="favicon.png"/> -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+	<link rel="icon" type="image/png" href="favicon.png"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class="wrapper">
+    <div class="header">
+      <img src="logo.png" class="logo"/>
+      <h1>Genotype Match Checker</h1>
+    </div>
+
+    <div class="main">
+      <div class="genotypes">
+
+        <div class="gene-group">
+          <h2 class="label">MAN</h2>
+          <div id="man">
+            <button class="man" value="AA">AA</button>
+            <button class="man" value="AS">AS</button>
+            <button class="man" value="AC">AC</button>
+            <button class="man" value="SC">SC</button>
+            <button class="man" value="SS">SS</button>
+          </div>
+        </div>
+
+        <div class="gene-group gene-group-woman">
+          <h2 class="label">WOMAN</h2>
+          <div id="woman">
+            <button class="woman" value="AA">AA</button>
+            <button class="woman" value="AS">AS</button>
+            <button class="woman" value="AC">AC</button>
+            <button class="woman" value="SC">SC</button>
+            <button class="woman" value="SS">SS</button>
+          </div>
+        </div>
+      </div>
+
+        <div class="button">
+          <input type="button" value="CHECK" class="check" disabled/>
+        </div>
+
+      <div class="result">
+        <div class="result-container">
+          <p class="result-text">resul</p>
+          <p class="result-text2">sjdkjbkjsbdjkbkjs</p>
+        </div>
+        <button class="modal-close">x</button>
+      </div>
+    </div>
+
+    <!-- <div class="tips">
+      <div class="tips-container">
+        <p class="tips-text">resul</p>
+        <p class="tips-text2">sjdkjbkjsbdjkbkjs</p>
+      </div>
+      <button class="modal-close">x</button>
+    </div>
+  </div> -->
+
+    <div class="backdrop-img"></div>
+    <div class="backdrop"></div>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

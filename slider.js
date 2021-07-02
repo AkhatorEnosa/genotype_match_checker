@@ -1,4 +1,9 @@
 var slideIndex = 1;
+var buttonNext = document.querySelector("button");
+
+function goToMainPage() {
+  window.location.href = "main.html";
+}
 
 // Next/previous controls
 // function plusSlides(n) {
@@ -25,9 +30,10 @@ function showSlides(n) {
       dots[i].className = dots[i].className.replace(" active", "");
   }
 
-  slides[slideIndex-1].style.display = "block";
+  slides[slideIndex-1].style.display = "flex";
   dots[slideIndex-1].className += " active";
 }
 
 
 showSlides(slideIndex);
+buttonNext.addEventListener("click", goToMainPage);
