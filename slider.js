@@ -18,9 +18,11 @@ function currentSlide(n) {
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
+  var next = document.querySelector(".next");
   var dots = document.getElementsByClassName("dot");
   console.log(slides.length)
-  if (n > slides.length) {slideIndex = 1}
+  if (n > slides.length) {slideIndex = 1;}
+  if (n > slides.length-1) { next.style.display = "none";}
   if (n < 1) {slideIndex = slides.length}
 
   for (i = 0; i < slides.length; i++) {
