@@ -22,7 +22,7 @@ function showSlides(n) {
   var dots = document.getElementsByClassName("dot");
   console.log(slides.length)
   if (n > slides.length) {slideIndex = 1;}
-  if (n > slides.length-1) { next.style.display = "none";}
+  if (n > slides.length-1) { next.style.visibility = "hidden";} else {next.style.visibility = "visible";}
   if (n < 1) {slideIndex = slides.length}
 
   for (i = 0; i < slides.length; i++) {
