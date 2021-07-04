@@ -19,10 +19,12 @@ function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
   var next = document.querySelector(".next");
+  var prev = document.querySelector(".prev");
   var dots = document.getElementsByClassName("dot");
-  console.log(slides.length)
   if (n > slides.length) {slideIndex = 1;}
   if (n > slides.length-1) { next.style.display = "none";} else {next.style.display = "block";}
+  if (n === 1) { prev.style.display = "none";} else {prev.style.display = "block";}
+
   if (n < 1) {slideIndex = slides.length}
 
   for (i = 0; i < slides.length; i++) {
